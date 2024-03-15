@@ -8,6 +8,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

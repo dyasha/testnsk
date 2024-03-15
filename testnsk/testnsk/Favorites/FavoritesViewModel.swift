@@ -8,37 +8,10 @@
 import UIKit
 
 struct FavoritePerson: Codable {
+    
     let name: String
     let imageUrl: Data?
 }
-
-//class FavoritesViewModel {
-//    static let shared = FavoritesViewModel()
-//
-//    var favoritePersons: [Person] = []
-//
-//    var reloadData: (() -> Void)?
-//
-//    func addFavoritePerson(_ person: Person) {
-//        favoritePersons.append(person)
-//        reloadData?()
-//    }
-//
-//    func removeFavoritePerson(withName name: String) {
-//        if let index = favoritePersons.firstIndex(where: { $0.name == name }) {
-//            favoritePersons.remove(at: index)
-//            reloadData?()
-//        }
-//    }
-//
-//    func numberOfFavoritePersons(_ section: Int) -> Int {
-//        return FavoritesViewModel.shared.favoritePersons.count
-//    }
-//
-//    func isPersonFavorite(withName name: String) -> Bool {
-//        return favoritePersons.contains(where: { $0.name == name })
-//    }
-//}
 
 class FavoritesViewModel {
 
@@ -86,5 +59,3 @@ class FavoritesViewModel {
         }
     }
 }
-
-

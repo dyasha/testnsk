@@ -8,10 +8,12 @@
 import Foundation
 
 struct CharacterListData: Decodable {
+
     let results: [CharacterList]
 }
 
 struct CharacterList: Decodable {
+    
     let name: String
     let image: String
 }

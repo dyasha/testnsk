@@ -8,10 +8,12 @@
 import UIKit
 
 protocol CharacterDetailsDelegate: AnyObject {
+
     func showCharacterDetails(personName: String, personImage: UIImage?)
 }
 
 class CharacterListViewController: UIViewController {
+
     var viewModel = CharacterListViewModel()
 
     let tableView: UITableView = {
@@ -48,6 +50,7 @@ class CharacterListViewController: UIViewController {
             }
         }
     }
+
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(tableView)

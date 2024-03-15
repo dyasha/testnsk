@@ -28,7 +28,6 @@
 		5945657A2BA2E9EE00C56432 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594565792BA2E9EE00C56432 /* FavoritesViewController.swift */; };
 		5945657E2BA2F08400C56432 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945657D2BA2F08400C56432 /* FavoritesViewModel.swift */; };
 		594565802BA2F69000C56432 /* FavoritesViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5945657F2BA2F69000C56432 /* FavoritesViewController + TableView.swift */; };
-		594565842BA314BE00C56432 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594565832BA314BE00C56432 /* FavoritesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +54,6 @@
 		594565792BA2E9EE00C56432 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		5945657D2BA2F08400C56432 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		5945657F2BA2F69000C56432 /* FavoritesViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController + TableView.swift"; sourceTree = "<group>"; };
-		594565832BA314BE00C56432 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 				594565792BA2E9EE00C56432 /* FavoritesViewController.swift */,
 				5945657D2BA2F08400C56432 /* FavoritesViewModel.swift */,
 				5945657F2BA2F69000C56432 /* FavoritesViewController + TableView.swift */,
-				594565832BA314BE00C56432 /* FavoritesTableViewCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				5945655F2BA2DD5200C56432 /* AuthViewController.swift in Sources */,
 				594565622BA2E18100C56432 /* CharacterListViewModel.swift in Sources */,
 				5945657E2BA2F08400C56432 /* FavoritesViewModel.swift in Sources */,
-				594565842BA314BE00C56432 /* FavoritesTableViewCell.swift in Sources */,
 				5945657A2BA2E9EE00C56432 /* FavoritesViewController.swift in Sources */,
 				5945656D2BA2E2C500C56432 /* ApiClient.swift in Sources */,
 				594565722BA2E3F000C56432 /* PersonViewController.swift in Sources */,

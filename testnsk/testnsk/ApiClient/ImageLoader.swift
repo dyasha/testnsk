@@ -8,6 +8,7 @@
 import UIKit
 
 class ImageLoader {
+
     static let shared = ImageLoader()
 
     func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
@@ -20,4 +21,3 @@ class ImageLoader {
         }.resume()
     }
 }
-

@@ -8,6 +8,7 @@
 import UIKit
 
 class RickAndMortyAPI {
+    
     static let shared = RickAndMortyAPI()
     private let url = "https://rickandmortyapi.com/api/character"
 

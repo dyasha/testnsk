@@ -8,6 +8,7 @@
 import UIKit
 
 class AuthViewController: UIViewController {
+
     private var viewModel: AuthViewModel!
     private var authView: AuthView!
 
@@ -52,5 +53,3 @@ class AuthViewController: UIViewController {
         authView.update(with: viewModel)
     }
 }
-
-

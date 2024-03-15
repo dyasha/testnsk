@@ -8,6 +8,7 @@
 import UIKit
 
 class PersonViewModel {
+    
     var personName: String = ""
     var personImage: UIImage?
     var isFavorite: Bool = false
