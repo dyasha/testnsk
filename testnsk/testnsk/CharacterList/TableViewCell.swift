@@ -17,6 +17,11 @@ class TableViewCell: UITableViewCell {
         return label
     }()
 
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+
     let customImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +53,7 @@ class TableViewCell: UITableViewCell {
         guard let personName = titleLabel.text else {
             return
         }
-        delegate?.showCharacterDetails(personName: personName, personImage: customImageView.image)
+        delegate?.showCharacterDetails(personName: personName, personImage: customImageView.image, personDescription: descriptionLabel.text ?? "")
     }
 
     private func commonInit() {

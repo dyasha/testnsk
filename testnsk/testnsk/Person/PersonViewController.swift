@@ -29,6 +29,15 @@ class PersonViewController: UIViewController {
         return label
     }()
 
+    let personDescription: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 19)
+        label.numberOfLines = 0
+        label.textColor = .black
+        return label
+    }()
+
     let favoriteButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .lightGray
@@ -42,6 +51,7 @@ class PersonViewController: UIViewController {
         view.backgroundColor = .systemGray6
         view.addSubview(personImageView)
         view.addSubview(personNameLabel)
+        view.addSubview(personDescription)
         view.addSubview(favoriteButton)
 
         setupFavoriteButton()
@@ -80,13 +90,21 @@ class PersonViewController: UIViewController {
             personNameLabel.topAnchor.constraint(equalTo: personImageView.bottomAnchor, constant: 40),
             personNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             personNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
+            personDescription.topAnchor.constraint(equalTo: personNameLabel.bottomAnchor, constant: 10),
+            personDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            personDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
         ])
     }
 
     private func updateUIWithViewModel() {
         personNameLabel.text = viewModel.personName
         personImageView.image = viewModel.personImage
-        if FavoritesViewModel.shared.isPersonFavorite(withName: viewModel.personName) {            favoriteButton.setTitle("Удалить из избранного", for: .normal)
+        personDescription.text = viewModel.personDescription
+
+        if FavoritesViewModel.shared.isPersonFavorite(withName: viewModel.personName) {
+            favoriteButton.setTitle("Удалить из избранного", for: .normal)
         } else {
             favoriteButton.setTitle("Добавить в избранное", for: .normal)
         }

@@ -30,6 +30,7 @@ extension CharacterListViewController: UITableViewDataSource {
         if let imageUrl = URL(string: viewModel.imageUrls[indexPath.row]) {
             cell.loadImage(from: imageUrl)
         }
+        cell.descriptionLabel.text = viewModel.description[indexPath.row]
         cell.delegate = self
         return cell
     }

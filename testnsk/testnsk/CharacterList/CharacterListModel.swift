@@ -7,13 +7,18 @@
 
 import Foundation
 
-struct CharacterListData: Decodable {
+struct Breed: Decodable {
 
-    let results: [CharacterList]
-}
-
-struct CharacterList: Decodable {
-    
     let name: String
-    let image: String
+    let description: String
+    let image: Image?
+
+    struct Image: Decodable {
+
+        let url: String
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case name, description, image
+    }
 }

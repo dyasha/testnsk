@@ -9,7 +9,7 @@ import UIKit
 
 protocol CharacterDetailsDelegate: AnyObject {
 
-    func showCharacterDetails(personName: String, personImage: UIImage?)
+    func showCharacterDetails(personName: String, personImage: UIImage?, personDescription: String)
 }
 
 class CharacterListViewController: UIViewController {
@@ -37,7 +37,7 @@ class CharacterListViewController: UIViewController {
         setupViews()
         setConstraints()
 
-        viewModel.requset()
+        viewModel.request()
         reloadTableView()
         cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
 
@@ -77,10 +77,11 @@ class CharacterListViewController: UIViewController {
 }
 
 extension CharacterListViewController: CharacterDetailsDelegate {
-    func showCharacterDetails(personName: String, personImage: UIImage?) {
+    func showCharacterDetails(personName: String, personImage: UIImage?, personDescription: String) {
         let characterVC = PersonViewController()
         characterVC.viewModel.personName = personName
         characterVC.viewModel.personImage = personImage
+        characterVC.viewModel.personDescription = personDescription
 
         present(characterVC, animated: true, completion: nil)
     }
